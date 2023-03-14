@@ -8,9 +8,14 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'sdasf'
 socketio = SocketIO(app)
 
-@app.route('/', methods=["POST", "GET"])
+@app.route('/profile')
 def home():
-    return '<h1>Hello World</h1>'
+    response_body = {
+        'name': 'Naruto',
+        'about': 'Hello! I am a ninja and aim to be the hokage someday!!!'
+    }
+
+    return response_body
 
 if __name__ == '__main__':
     socketio.run(app, debug=True)
