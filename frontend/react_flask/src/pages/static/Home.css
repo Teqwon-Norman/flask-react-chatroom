@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.homepage {
+    text-align: center;
+    justify-content: center;
+}
